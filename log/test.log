@@ -1,0 +1,126 @@
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing BlogsController#index (for 0.0.0.0 at 2009-05-01 12:31:27) [GET]
+Rendering blogs/index
+Completed in 40ms (View: 37, DB: 92) | 200 OK [http://test.host/blogs]
+
+
+Processing BlogsController#index (for 0.0.0.0 at 2009-05-01 12:36:30) [GET]
+Rendering blogs/index
+Completed in 3ms (View: 2, DB: 2) | 200 OK [http://test.host/blogs]
+
+
+Processing BlogsController#index (for 0.0.0.0 at 2009-05-01 12:38:43) [GET]
+Rendering blogs/index
+Completed in 3ms (View: 1, DB: 1) | 200 OK [http://test.host/blogs]
+
+
+Processing BlogsController#index (for 0.0.0.0 at 2009-05-01 12:41:46) [GET]
+Rendering blogs/index
+Completed in 3ms (View: 1, DB: 1) | 200 OK [http://test.host/blogs]
+
+
+Processing BlogsController#index (for 0.0.0.0 at 2009-05-01 12:44:40) [GET]
+  [4;36;1mBlog Load (0.3ms)[0m   [0;1mSELECT * FROM "blogs" [0m
+Rendering blogs/index
+Completed in 3ms (View: 1, DB: 1) | 200 OK [http://test.host/blogs]
+
+
+Processing BlogsController#index (for 0.0.0.0 at 2009-05-01 12:49:41) [GET]
+  [4;36;1mBlog Load (0.3ms)[0m   [0;1mSELECT * FROM "blogs" [0m
+Rendering blogs/index
+Completed in 8ms (View: 5, DB: 9) | 200 OK [http://test.host/blogs]
+
+
+Processing BlogsController#index (for 0.0.0.0 at 2009-05-01 12:50:02) [GET]
+  [4;36;1mBlog Load (0.3ms)[0m   [0;1mSELECT * FROM "blogs" [0m
+Rendering blogs/index
+ERROR: compiling _run_erb_app47views47blogs47index46html46erb RAISED compile error
+/Users/okauk/_apps/myblog/app/views/blogs/index.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting kEND
+;  end x ; @output_buffer.concat "\n</ul>"
+        ^
+Function body:           def _run_erb_app47views47blogs47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Blogs</h1>\n<ul>\n"
+
+;  @blogs.each do |blog| 
+@output_buffer.concat "\t<li>\n\t\t\n\t</li>\n"
+
+
+;  end x ; @output_buffer.concat "\n</ul>"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/okauk/_apps/myblog/app/views/blogs/index.html.erb:11:in `compile!'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render_without_template_tracking'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/test_case.rb:20:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/test_process.rb:559:in `process_with_test'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/test_process.rb:439:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/test_process.rb:390:in `get'
+/Users/okauk/_apps/myblog/test/functional/blogs_controller_test.rb:5:in `test_get_index'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/testing/setup_and_teardown.rb:62:in `__send__'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/testing/setup_and_teardown.rb:62:in `run'
+/opt/local/lib/ruby/1.8/test/unit/testsuite.rb:34:in `run'
+/opt/local/lib/ruby/1.8/test/unit/testsuite.rb:33:in `each'
+/opt/local/lib/ruby/1.8/test/unit/testsuite.rb:33:in `run'
+/opt/local/lib/ruby/1.8/test/unit/testsuite.rb:34:in `run'
+/opt/local/lib/ruby/1.8/test/unit/testsuite.rb:33:in `each'
+/opt/local/lib/ruby/1.8/test/unit/testsuite.rb:33:in `run'
+/opt/local/lib/ruby/1.8/test/unit/ui/testrunnermediator.rb:46:in `run_suite'
+/opt/local/lib/ruby/1.8/test/unit/ui/console/testrunner.rb:67:in `start_mediator'
+/opt/local/lib/ruby/1.8/test/unit/ui/console/testrunner.rb:41:in `start'
+/opt/local/lib/ruby/1.8/test/unit/ui/testrunnerutilities.rb:29:in `run'
+/opt/local/lib/ruby/1.8/test/unit/autorunner.rb:216:in `run'
+/opt/local/lib/ruby/1.8/test/unit/autorunner.rb:12:in `run'
+/opt/local/lib/ruby/1.8/test/unit.rb:278
+/Users/okauk/_apps/myblog/test/functional/blogs_controller_test.rb:4
+
+
+Processing BlogsController#index (for 0.0.0.0 at 2009-05-01 13:12:23) [GET]
+  [4;36;1mBlog Load (0.3ms)[0m   [0;1mSELECT * FROM "blogs" [0m
+Rendering blogs/index
+
+
+Processing BlogsController#index (for 0.0.0.0 at 2009-05-01 13:13:01) [GET]
+  [4;36;1mBlog Load (0.3ms)[0m   [0;1mSELECT * FROM "blogs" [0m
+Rendering blogs/index
+Completed in 6ms (View: 3, DB: 2) | 200 OK [http://test.host/blogs]
+
+
+Processing BlogsController#index (for 0.0.0.0 at 2009-05-01 13:23:26) [GET]
+  [4;36;1mBlog Load (0.3ms)[0m   [0;1mSELECT * FROM "blogs" [0m
+Rendering template within layouts/application
+Rendering blogs/index
+Completed in 75ms (View: 73, DB: 42) | 200 OK [http://test.host/blogs]
