@@ -418,3 +418,61 @@ Processing BlogsController#index (for 127.0.0.1 at 2009-05-01 13:17:52) [GET]
 Rendering template within layouts/application
 Rendering blogs/index
 Completed in 26ms (View: 15, DB: 0) | 200 OK [http://localhost/blogs/]
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2009-05-01 13:54:27) [GET]
+  [4;35;1mBlog Load (0.5ms)[0m   [0mSELECT * FROM "blogs" [0m
+Rendering template within layouts/application
+Rendering blogs/index
+
+ActionView::TemplateError (wrong number of arguments (2 for 1)) on line #4 of app/views/blogs/index.html.erb:
+1: <h1>Blogs</h1>
+2: <ul>
+3: <% @blogs.each do |blog| %>
+4: 	<li><%= link_to h blog.title, blog_path(blog) %></li>
+5: <% end %>
+6: </ul>
+
+    app/views/blogs/index.html.erb:4:in `h'
+    app/views/blogs/index.html.erb:4
+    app/views/blogs/index.html.erb:3:in `each'
+    app/views/blogs/index.html.erb:3
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (70.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2009-05-01 13:54:43) [GET]
+  [4;36;1mBlog Load (0.5ms)[0m   [0;1mSELECT * FROM "blogs" [0m
+Rendering template within layouts/application
+Rendering blogs/index
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/blogs/]
+
+
+Processing BlogsController#show (for 127.0.0.1 at 2009-05-01 13:54:50) [GET]
+  Parameters: {"id"=>"1"}
+
+ActionController::UnknownAction (No action responded to show. Actions: index):
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)

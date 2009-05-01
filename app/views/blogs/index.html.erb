@@ -1,6 +1,6 @@
 <h1>Blogs</h1>
 <ul>
 <% @blogs.each do |blog| %>
-	<li><%= h blog.title %></li>
+	<li><%= link_to h(blog.title), blog_path(blog) %></li>
 <% end %>
 </ul>
