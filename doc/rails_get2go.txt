@@ -1,0 +1,28 @@
+
+Gems Konfigurieren:
+config/environment.rb oder config/environments/*.rb
+In config initializer block:
+Rails::Initializer.run do |config|
+	config.gem "thoughtbot-shoulda", :lib => "shoulda", :source => "http://gems.github.com"
+	....
+end
+
+Create Methode:
+
+Pseudocode in Blog
+def self.create(options)
+  obj = Blog.new(options)
+  wird_ignoriert = obj.save
+  obj
+end
+
+def self.create!(options)
+  obj = Blog.new(options)
+  obj.save!
+  obj
+end
+
+
+
+save => true oder false
+save! => true oder Exception im Fehlerfall
